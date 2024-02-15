@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-
 class ProductModel {
   final String id;
   final String name;
@@ -20,8 +19,8 @@ class ProductModel {
 
   factory ProductModel.fromMap(Map<String, dynamic> map) {
     return ProductModel(
-      id: map['id'] as String,
-      name: map['name'] as String,
+      id: map['id'].toString(),
+      name: map['name'].toString(),
     );
   }
 }

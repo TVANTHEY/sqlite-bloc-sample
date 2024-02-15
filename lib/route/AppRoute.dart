@@ -1,5 +1,6 @@
 import 'package:countstock/presentation/adjust_stock/adjust_stock_screen.dart';
 import 'package:countstock/presentation/count_stock/count_stock_screen.dart';
+import 'package:countstock/presentation/product/product_screen.dart';
 import 'package:countstock/presentation/screen/main_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -41,6 +42,15 @@ class AppRoute {
         return PageRouteBuilder(
           pageBuilder: (context, animation, secondaryAnimation) {
             return const AdjustStockScreen();
+          },
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return _st(animation, child);
+          },
+        );
+      case ProductScreen.routeName:
+        return PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) {
+            return const ProductScreen();
           },
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return _st(animation, child);

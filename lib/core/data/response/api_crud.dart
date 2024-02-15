@@ -11,9 +11,7 @@ class ApiCrud implements Api {
   Future<ApiResponse> getPersonList() async {
     try {
       final db = await AppDatabase.instance.db;
-
       final record = await db.query(ProductModel.tableName);
-
       return ApiResponse(records: record);
     } on DataExecption {
       throw GeneralException();

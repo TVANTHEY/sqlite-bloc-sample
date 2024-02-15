@@ -11,11 +11,19 @@ class ProductRepo {
   Future<Either<Failure, RepoResponse<List<ProductModel>>>>
       getProductList() async {
     try {
+      final result = await api.getPersonList();
+
+      final List<ProductModel> record = [];
+
+      for (var e in result.records) {
+        record.add(ProductModel.fromMap(e));
+      }
+
       return Right(RepoResponse(
-        records: [],
+        records: record,
       ));
     } on DataExecption {
-      return Left(DataFailure(""));
+      return Left(DataFailure("Error"));
     }
   }
 }
