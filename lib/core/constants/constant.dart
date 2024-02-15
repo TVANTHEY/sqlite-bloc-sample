@@ -1,0 +1,1 @@
+enum LogMode { debug, live }
