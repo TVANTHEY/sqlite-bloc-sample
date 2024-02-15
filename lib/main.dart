@@ -1,6 +1,6 @@
 import 'package:countstock/core/constants/global_key.dart';
 import 'package:countstock/core/localization/local_delegate.dart';
-import 'package:countstock/route/AppRoute.dart';
+import 'package:countstock/routes/AppRoute.dart';
 import 'package:flutter/material.dart';
 
 void main() {
